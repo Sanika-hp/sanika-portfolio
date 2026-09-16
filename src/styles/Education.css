@@ -1,0 +1,151 @@
+/* ==========================================================================
+   EDUCATION SECTION STYLES
+   ========================================================================== */
+
+.education-timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* Vertical Center/Side Line */
+.education-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 32px;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, #38bdf8 0%, #818cf8 50%, rgba(148, 163, 184, 0.2) 100%);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 75px;
+  margin-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Node Icon Marker */
+.timeline-marker {
+  position: absolute;
+  top: 0;
+  left: 18px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0a0f1d;
+  border: 2px solid var(--accent-cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+  z-index: 2;
+  transition: all var(--transition-fast);
+}
+
+.timeline-item.active .timeline-marker {
+  background: var(--accent-cyan);
+  color: #080c14;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+.timeline-card {
+  padding: 1.75rem 2rem;
+}
+
+.timeline-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.institution-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+
+.degree-name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--accent-cyan);
+  margin-bottom: 0.4rem;
+}
+
+.location-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+
+.period-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  border-radius: var(--radius-full);
+  color: var(--accent-cyan);
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.period-badge.completed {
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.25);
+  color: var(--text-muted);
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+
+.timeline-highlights-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  list-style: none;
+}
+
+.timeline-highlight-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: #cbd5e1;
+}
+
+@media (max-width: 680px) {
+  .education-timeline::before {
+    left: 20px;
+  }
+  .timeline-marker {
+    left: 6px;
+  }
+  .timeline-item {
+    padding-left: 50px;
+  }
+  .timeline-card {
+    padding: 1.25rem;
+  }
+  .timeline-highlights-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,50 @@
+/* ==========================================================================
+   APP MAIN STYLES
+   ========================================================================== */
+
+.app-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background ambient light effects */
+.ambient-glow {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.glow-top-left {
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: #38bdf8;
+}
+
+.glow-mid-right {
+  top: 40%;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+  background: #818cf8;
+}
+
+.glow-bottom-left {
+  bottom: 10%;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: #c084fc;
+}

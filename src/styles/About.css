@@ -1,0 +1,120 @@
+/* ==========================================================================
+   ABOUT SECTION STYLES
+   ========================================================================== */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* Left: Narrative Bio */
+.about-bio-card {
+  padding: 2.25rem;
+}
+
+.about-bio-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.about-bio-paragraphs p {
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.about-bio-paragraphs p strong {
+  color: var(--text-bright);
+}
+
+/* Quick Facts Strip */
+.quick-facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.fact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.fact-label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.fact-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-bright);
+}
+
+/* Right: Focus Cards */
+.focus-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.focus-card {
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.focus-icon-box {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.focus-card:hover .focus-icon-box {
+  background: var(--accent-cyan);
+  color: #080c14;
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.focus-card-content h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.focus-card-content p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .quick-facts-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-bio-card {
+    padding: 1.5rem;
+  }
+}
